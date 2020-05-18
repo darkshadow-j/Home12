@@ -17,7 +17,7 @@ public class ImageUploadImpl implements ImageUpload {
     @Override
     public File uploadFile(MultipartFile multipartFile){
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-        Path path = Paths.get(fileName);
+        Path path = Paths.get("/var/www/html/" + fileName);
         try {
             Files.copy(multipartFile.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {

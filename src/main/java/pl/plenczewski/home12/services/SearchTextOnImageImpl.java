@@ -11,7 +11,7 @@ import java.io.File;
 @Service
 public class SearchTextOnImageImpl implements SearchTextOnImage {
 
-    private final static String DATAPATH_NAME="tessdata";
+    private final static String DATAPATH_NAME="/home/tessdata";
 
     @Override
     public String getText(File imageFile) {
